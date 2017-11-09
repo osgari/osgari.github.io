@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Juttua</title>
+<style>
+* {
+box-sizing: border-box;
+}
+#header, #footer  {
+border: solid 3px;
+background-color: orange;
+}
+#menu, #content, #container {
+border: solid 1px;
+}
+img {
+float: right;
+}
+#menu {
+float:left;
+width:25%;
+}
+#content {
+float:left;
+width:75%;
+}
+#container::after {
+content:"";
+clear:both;
+display:table;
+}
+#menu ul {
+list-style-type:none;
+}
+#menu li {
+background-color:orange;
+padding:2px;
+margin:5px;
+}
+#menu li:hover {
+background-color:silver;
+color:black;
+
+}
+
+</style>
+</head>
+<body>
+<div id="header">
+<h1>Nousiaisten nähtävyydet</h1>
+</div> <!--header loppuu -->
+<div id="container">
+<div id="menu">
+
+<ul>
+<li><a href="historia.html">Historia</a></li>
+<li><a href="vaakuna.html">Vaakuna</a></li>
+<li><a href="kirkko.html">Kirkko</a></li>
+<li><a href="peltoa.html">Peltoa</a></li>
+<li><a href="joki.html">Joki</a></li>
+</ul>
+</div> <!-- menu loppuu -->
+<div id="content">
+
+<img style="width: 250px;" src="">
+<p><h3>Joki</h3>Nousiaisissa on joki</p>
+</div> <!-- content loppuu -->
+</div> <!--container loppuu -->
+<div id="footer">
+<p>&copy; TiVi-17o </p>
+</div> <!--Footer loppuu -->
+</body>
+</html>
