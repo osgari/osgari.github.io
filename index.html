@@ -1,33 +1,81 @@
 <html>
 <head>
-<title>Voitit paljon raheja</title>
+<title>Laatikko</title>
 <meta charset="utf-8">
-<script
-			  src="https://code.jquery.com/jquery-3.2.1.js"
-			  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-			  crossorigin="anonymous">
-			  </script>
-
+<style>
+body {
+background-color:red;
+}
+#main {
+text-align:center;
+border:solid 2px coral;
+background-color:white;
+}
+#button {
+  width:50%;
+  height:15%;
+  background-color:violet;
+  border-style:dashed;
+  
+}
+</style>
 </head>
 <body>
-<h1>Paina nappulasta ja saat raheja</h1>
+<div id="main" style="width:600px; margin: auto;">
+        <h2>Kirjoita...</h2>
+		<h3>Nimesi</h3>
+		<input type="text" name="search" placeholder="Kirjoita nimesi tähän">
+		<h3>Syntymäkuukautesi</h3>
+		<select id='gMonth2' onchange="show_month()">
+    <option value=''>--Valitse kuukausi--</option>
+    <option selected value='1'>Tammikuu</option>
+    <option value='2'>Helmikuu</option>
+    <option value='3'>Maaliskuu</option>
+    <option value='4'>Huhtikuu</option>
+    <option value='5'>Toukokuu</option>
+    <option value='6'>Kesäkuu</option>
+    <option value='7'>Heinäkuu</option>
+    <option value='8'>Elokuu</option>
+    <option value='9'>Syyskuu</option>
+    <option value='10'>Lokakuu</option>
+    <option value='11'>Marraskuu</option>
+    <option value='12'>Joulukuu</option>
+    </select> 
+	<h3>Sukupuolesi</h3>
+	<form action="/action_page.php">
+  <input type="radio" name="gender" value="Mies">Mies<br>
+  <input type="radio" name="gender" value="Nainen" checked>Nainen<br>
+<input type="radio" name="gender" value="Hyökkäyshelikopteri" checked>Hyökkäyshelikopteri<br>
+</form> 
+<h3>Lempivärisi</h3>
+<select id='colorg2' onchange="show_color()">
+    <option value=''>--Valitse lempivärisi--</option>
+    <option selected value='1'>Punainen</option>
+    <option value='2'>Valkoinen</option>
+    <option value='3'>Harmaa</option>
+    <option value='4'>Musta</option>
+    <option value='5'>Sininen</option>
+    <option value='6'>Turkoosi</option>
+    <option value='7'>Vihreä</option>
+    <option value='8'>Keltainen</option>
+    <option value='9'>Oranssi</option>
+    <option value='10'>Ruskea</option>
+    <option value='11'>Violetti</option>
+    <option value='12'>Pinkki</option>
+	</select>
+	<h3>Lempikarkkisi</h3>
+<form action="/action_page.php">
+  <input type="checkbox" name="Karkki" value="Tikkari">Tikkari
+  <input type="checkbox" name="karkki" value="Lakritsi" checked>Lakritsi
+<input type="checkbox" name="karkki" value="Hedelmä" checked>Hedelmä
+<input type="checkbox" name="karkki" value="Salmiakki" checked>Salmiakki
+</form>
+<button id="button">
+<img src="http://www.clker.com/cliparts/T/8/V/V/V/G/ok-button-th.png">
+ <li><a href="virus.html">Paina tästä nähdäksesi tulevaisuutesi! Paina nyt! Heti!</a></li>
+  </button>
 
-<p>Terveisin Sauli Niinistö</p>
-<button id="nappi">Paina tästä saat rahat. Ota virustorjunta ja palomuuri pois päältä!</button>
-<p id="tekstiKohta"></p>
-<img src="" id="kuva">
+		
+    </div>
 </body>
-<script>
-$("#nappi").click(function() {
-alert("virus.exe on ladattu. Kiitos yhteistyöstä!");
-} );
-/*
-//talletetaan nappi elementti muuttujaan nappiMuut
-var nappiMuut = document.getElementById("nappi");
-//liitetään nappiin event
-nappiMuut.addEventListener("click", function() {
-   document.getElementById("kuva").src = "virus.jpg"
-} );
-*/
-</script>
 </html>
