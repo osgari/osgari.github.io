@@ -1,0 +1,90 @@
+<!doctype html>
+
+<html>
+
+<head>
+<title>Ennustus</title>
+
+<meta charset="utf8">
+
+<style>
+body {
+background-image: url("http://dl.glitter-graphics.com/pub/572/572810zenyqttcne.gif");
+ background-size: 960px 1000px;
+background-color:red;
+}
+#main, #ennustus {
+text-align:center;
+margin:auto;
+width:600px;
+border: solid 2px pink;
+background-color:white;
+}
+button {
+background-color:red;
+color:black;
+margin:20px;
+font-size:20px;
+font-family:"Arial";
+border-radius:20px;
+}
+</style>
+</head>
+<body>
+<div id="main">
+<h2>Kirjoita...</h2>
+<h3>Nimesi</h3>
+<input type="text" id="nimi">
+<h3>Syntymäkuukautesi</h3>
+<select name="kuukausi">
+<option> - Valitse syntymäkuukautesi - </option>
+<option value="Tammikuu">Tammikuu</option>
+<option value="Helmikuu">Helmikuu</option>
+<option value="Maaliskuu">Maaliskuu</option>
+<option value="Huhtikuu">Huhtikuu</option>
+<option value="Toukokuu">Toukokuu</option>
+<option value="Kesakuu">Kesäkuu</option>
+<option value="Heinakuu">Heinäkuu</option>
+<option value="Elokuu">Elokuu</option>
+<option value="Syyskuu">Syyskuu</option>
+<option value="Lokakuu">Lokakuu</option>
+<option value="Marrakuu">Marraskuu</option>
+<option value="Joulukuu">Joulukuu</option>
+</select>
+
+<h3>Sukupuolesi</h3>
+<label><input style="margin-bottom:10px" type="radio" name="spuoli" value="mies">Mies</label>
+<label><input style="margin-bottom:10px" type="radio" name="spuoli" value="nainen">Nainen</label>
+<label><input style="margin-bottom:10px" type="radio" name="spuoli" value="Muu">Hyökkäyshelikopteri</label>
+<h3>Lempikarkkisi</h3>
+<input type="checkbox" name="lakritsi" value="lakritsi">Lakritsi
+<input type="checkbox" name="suklaa" value="suklaa"> Suklaa
+<input type="checkbox" name="irtokarkit" value="irtokarkit"> Irtokarkit 
+<input type="checkbox" name="vaahto" value="vaahto"> Vaahtokarkit
+<br>
+
+<button>Paina tästä ennustaaksesi tulevaisuutesi! Paina nyt HETI!!!
+<img src="http://www.clker.com/cliparts/T/8/V/V/V/G/ok-button-th.png"></button>
+</div> <!-- main loppuu -->
+<div id="ennustus" style="display:none">
+En tiiä.
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+$("button").click( function() {
+var nimi = $("#nimi").val().toLowerCase();
+var karkki = "Lakritsi";
+if( nimi == "pekka" ) {
+if( karkki == "Lakritsi") {
+alert("En tiiä kiitos tiedoistasi");
+}
+}
+
+else {
+alert("Voitat paljon raheja, jos lähetät luottokorttisi tiedot meille");
+}
+
+} );
+</script>
+</html>
